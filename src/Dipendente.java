@@ -25,8 +25,13 @@ public abstract class Dipendente {
 
     }
 
+    public static double calculateAllSalary(DipendentePartTime dipendentePartTime, DipendenteFullTime dipendenteFullTime, Dirigente dirigente) {
+        return dipendentePartTime.calculateSalary() + dipendenteFullTime.calculateSalary() + dirigente.calculateSalary();
+
+
+    }
+
     public abstract double calculateSalary();
-    
 
     /*GETTER SETTER*/
 

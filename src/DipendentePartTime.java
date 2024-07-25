@@ -1,12 +1,16 @@
 import enums.Dipartimento;
 
 public class DipendentePartTime extends Dipendente {
-    public DipendentePartTime(int matricola, int stipendio, Dipartimento dipartimento, int oreLavorate) {
-        super(matricola, stipendio, dipartimento);
+
+
+    public DipendentePartTime(int matricola, int stipendioOra, Dipartimento dipartimento, double oreLavorate) {
+        super(matricola, stipendioOra, dipartimento, oreLavorate);
     }
 
     @Override
-    public void calculateSalary() {
+    public double calculateSalary() {
+        return this.getStipendioOra() * getOreLavorate();
+
 
     }
 }

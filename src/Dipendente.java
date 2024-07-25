@@ -4,15 +4,17 @@ public abstract class Dipendente {
 
     //ATTRIBUTI
     private int matricola;
-    private double stipendio;
+    private double stipendioOra;
     private Dipartimento dipartimento;
+    private double oreLavorate;
 
 
     /*COSTRUTTORI*/
-    public Dipendente(int matricola, int stipendio, Dipartimento dipartimento) {
+    public Dipendente(int matricola, int stipendioOra, Dipartimento dipartimento, double oreLavorate) {
         this.matricola = matricola;
-        this.stipendio = stipendio;
+        this.stipendioOra = stipendioOra;
         this.dipartimento = dipartimento;
+        this.oreLavorate = oreLavorate;
     }
 
     /*METODI*/
@@ -23,15 +25,21 @@ public abstract class Dipendente {
 
     }
 
-    public abstract void calculateSalary();
+    public abstract double calculateSalary();
+    
 
     /*GETTER SETTER*/
+
+    public double getOreLavorate() {
+        return oreLavorate;
+    }
+
     public int getMatricola() {
         return matricola;
     }
 
-    public double getStipendio() {
-        return stipendio;
+    public double getStipendioOra() {
+        return stipendioOra;
     }
 
     public Dipartimento getDipartimento() {
@@ -41,6 +49,7 @@ public abstract class Dipendente {
     public void setDipartimento(Dipartimento dipartimento) {
         this.dipartimento = dipartimento;
     }
-
-
 }
+
+
+

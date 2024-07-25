@@ -1,3 +1,5 @@
+import enums.Dipartimento;
+
 public class Main {
     public static void main(String[] args) {
        /* Dipendente dipendente1 = new Dipendente(1, 1400, Dipartimento.AMMINISTRAZIONE);
@@ -8,5 +10,14 @@ public class Main {
 
         Dipendente.stampaMatricola(dipendente1, dipendente2, dipendente3);*/
 
+        DipendentePartTime dipendentePartTime = new DipendentePartTime(3, 7, Dipartimento.PRODUZIONE, 80);
+        DipendenteFullTime dipendenteFullTime = new DipendenteFullTime(2, 12, Dipartimento.VENDITE, 160);
+        Dirigente dirigente = new Dirigente(1, 20, Dipartimento.AMMINISTRAZIONE, 180);
+
+        Dipendente[] dipendenti = {dipendentePartTime, dipendenteFullTime, dirigente};
+        for (Dipendente dipendente : dipendenti) {
+            System.out.println("lo stipendio è" + dipendente.calculateSalary());
+            System.out.println("lo stipendio totale dei dipendenti è: ");
+        }
     }
 }

@@ -16,7 +16,7 @@ public class Main {
 
         Dipendente[] dipendenti = {dipendentePartTime, dipendenteFullTime, dirigente};
         for (Dipendente dipendente : dipendenti) {
-            System.out.println("lo stipendio è" + dipendente.calculateSalary());
+            System.out.println("lo stipendio della matricola " + dipendente.getMatricola() + " è: " + dipendente.calculateSalary());
 
         }
         System.out.println("lo stipendio totale dei dipendenti è: " + Dipendente.calculateAllSalary(dipendentePartTime, dipendenteFullTime, dirigente));
